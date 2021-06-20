@@ -85,3 +85,57 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+// REDUCE THE SIZE AND PRINT ON A4
+function scaleCv() {
+    document.body.classList.add('scale-cv')
+}
+
+
+// REMOVES THE SIZE WHEN CV IS DOWNLOADED
+function removeScale() {
+    document.body.classList.remove('scale-cv')
+}
+
+// =============== GENERATE PDF ========================
+
+//PDF generated area
+// https://ekoopmans.github.io/html2pdf.js/
+
+
+
+
+let areaCv = document.getElementById('area-cv')
+
+let resumeButton = document.getElementById('resume-button')
+
+
+//HTML2PDF options
+let opt = {
+    margin: 0,
+    filename: 'resume.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 4 },
+    jsPDF: { format: 'a4', orientation: 'portrait' }
+};
+
+// function to call areaCv and HTML2Pdf
+function gerateResume() {
+    html2pdf(areaCv, opt)
+}
+
+
+
+//when the button is clicked it executes the three functions
+resumeButton.addEventListener('click', () => {
+
+    //1. the scaleCv(): void is added to the body, ehere it reduces the size
+    scaleCv()
+
+    //2. the pdf is generated
+    gerateResume()
+
+    //3. the scale-cv is remved after 5 seconds and everything returns to normal
+    setTimeout(removeScale, 5000)
+
+})

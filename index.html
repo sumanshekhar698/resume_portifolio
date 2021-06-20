@@ -84,8 +84,11 @@
   </header>
 
 
+
   <main class="l-main bd-container">
-    <div class="resume">
+    <!-- All elements within this div is generated in pdf  -->
+
+    <div class="resume" id="area-cv">
 
       <div class="resume__left">
         <section class="home" id="home">
@@ -104,24 +107,26 @@
               </div>
 
             </div>
-            <div class="home__address bd-grid"></div>
-            <span class="home_information">
-              <i class='bx bx-map home__icon'></i> Electronic City, Bangalore, INDIA
-
-            </span>
-            <span class="home_information">
-              <i class='bx bx-envelope home__icon'></i> sumanshekhar1694698@gmail.com
-            </span>
-
-            <span class="home_information">
-              <i class='bx bx-phone home__icon'></i> 7209698313
-
-            </span>
+            <div class="home__address bd-grid">
+              <span class="home_information">
+                <i class='bx bx-map home__icon'></i> Electronic City, Bangalore, INDIA
+              </span>
+              <span class="home_information">
+                <i class='bx bx-envelope home__icon'></i> sumanshekhar1694698@gmail.com
+              </span>
+              <span class="home_information">
+                <i class='bx bx-phone home__icon'></i> 7209698313
+              </span>
+            </div>
           </div>
 
           <!-- Theme change button  -->
           <i class='bx bx-moon change-theme' title="Theme" id="theme-button"></i>
+
           <!-- \Button to generate and download the pdf. Available for desktop -->
+
+          <i class='bx bx-download generate-pdf' title="Generate PDF" id="resume-button"></i>
+
 
         </section>
 
@@ -203,7 +208,7 @@
               </div>
 
               <div class="education__data bd-gid">
-                <h3 class="education__title">B-Tech IN CHEMICAL ENGINEEING</h3>
+                <h3 class="education__title">B-Tech in Chemical Engineering</h3>
                 <span class="education__studies">Heritage Institute of Technology</span><br>
                 <span class="education__year">2015 - 2019</span>
               </div>
@@ -223,10 +228,10 @@
                 <span class="skills__circle"></span> Java
               </li>
               <li class="skills_name">
-                <span class="skills__circle"></span> Spring framework
+                <span class="skills__circle"></span> Spring
               </li>
               <li class="skills_name">
-                <span class="skills__circle"></span> Mockito framework
+                <span class="skills__circle"></span> Mockito
               </li>
               <li class="skills_name">
                 <span class="skills__circle"></span> Python
@@ -375,7 +380,7 @@
 
             <div class="interests__content">
               <i class='bx bx-book interests__icon'></i>
-              <span class="interests__name">Read</span>
+              <span class="interests__name">Reading</span>
             </div>
             <div class="interests__content">
               <i class='bx bx-coin interests__icon'></i>
@@ -415,7 +420,7 @@
 
 
   <!-- ========   HTML 2 pdf   =======  -->
-  <script src=""></script>
+  <script src="./assets/js/html2pdf.bundle.min.js"></script>
 
   <!-- ========   main.js    =======  -->
   <script src="assets/js/main.js"></script>
