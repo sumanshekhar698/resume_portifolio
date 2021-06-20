@@ -56,6 +56,13 @@ html {
 
 
 /* ========   Variables Dark theme   =======   */
+body.dark-theme{
+  --title-color: #F2F2F2;
+  --text-color: #BFBFBF;
+  --container-color: #212121;
+  --container-color-alt: #181616;
+  --body-color: #2B2B2B;
+}
 
 /* ========   Button Dark/Light   =======   */
 .change-theme{
